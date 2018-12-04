@@ -1,7 +1,7 @@
 FROM node:lts-alpine
 
 RUN set -ex \
-  && apk --update add git openssh python py-pip \
+  && apk --update add git openssh python py-pip vips \
   && pip install awscli \
   && apk --purge del py-pip \
   && rm -rf /var/lib/apt/lists/* \
